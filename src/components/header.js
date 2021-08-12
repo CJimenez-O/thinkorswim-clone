@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FaGraduationCap, FaBell, FaUserTie } from "react-icons/fa";
-import { GrSearch } from "react-icons/gr";
+import { FaGraduationCap, FaHourglassHalf, FaBell, FaUserTie, FaSearch } from "react-icons/fa";
 import { IoHourglassOutline } from "react-icons/io5";
 import { BiMessage, BiMessageError } from "react-icons/bi";
 
@@ -25,44 +24,48 @@ function header() {
         </li>
         <li>
           <div className="search">
-           <p className='icon'>  <GrSearch style={{color: 'white'}} /> </p>
+           <p className='icon'>  <FaSearch /> </p>
             <input className='search-input' placeholder='Find a Symbol' type="search-input"></input>
           </div>
         </li>
-        <li className="open">
-          <div>
-            <IoHourglassOutline />
-            <div>
+        </ul>
+
+
+        <ul className='header-elements'>
+        <li >
+          <div className='open'>
+            <p className='hourglass'><FaHourglassHalf /></p>
+            <div className='time-container'>
               <p className="time">12:32:16</p>
-              <p> until open </p>
+              <p className='time'> until open </p>
             </div>
           </div>
         </li>
-        <li>
+        <li className='link'>
           <p>
             <FaGraduationCap />
           </p>
           <p>Education</p>
         </li>
-        <li>
+        <li className='link'>
           <p>
             <FaBell />
           </p>
           <p> Notifications </p>
         </li>
-        <li>
+        <li className='link'>
           <p>
             <BiMessage />
           </p>
           <p> Feedback </p>
         </li>
-        <li>
+        <li className='link'>
           <p>
             <BiMessageError />
           </p>
           <p> Support </p>
         </li>
-        <li>
+        <li className='link'>
           <p>
             <FaUserTie />
           </p>
@@ -76,6 +79,8 @@ function header() {
 const Header = styled.nav`
   background-color: #1f1f1f;
   padding: 10px 2%;
+  display: flex;
+  justify-content: space-between;
   li p {
     color: #999;
   }
@@ -87,6 +92,7 @@ const Header = styled.nav`
 
   .header-elements li{
     list-style: none;
+    text-align: center;
   }
 
   .live{
@@ -97,7 +103,6 @@ const Header = styled.nav`
       color: green;
   }
   .connect{
-      margin-left: 15px;
       font-size: 12px;
       font-weight: bold;
   }
@@ -109,7 +114,6 @@ const Header = styled.nav`
 
   // search symbol input box
   .search{  
-      color: #999;
       border: 1px solid white;
       padding: 5px 10px;
       display: flex;
@@ -119,14 +123,50 @@ const Header = styled.nav`
 
   .icon{
       font-size: 20px;
+      color: #999;
   }
   .search-input{
     border: none;
     background: none;
     font-size: 16px;
+    color: #999;
+    font-size: 16px;
+  }
+  .search-input:focus{
+      outline: none;
+      border: none;
   }
 
-  // end of search input boc
+  // end of search input box
+
+
+
+  .open{
+      display: flex;
+      gap: 10px;
+      margin-top: 5px;
+      margin-right: 10px;
+  }
+
+  .hourglass{
+      font-size: 16px;
+      margin-top: 8px;
+      color:  #f0a033;
+  }
+  .time-container{
+      font-size: 12px;
+  }
+  .time{
+      color:  #f0a033;
+  }
+
+  .link{
+      border-left: 1px solid black;
+      padding:0 10px;
+      font-size: 14px;
+      font-weight: bold;
+  }
+
 `;
 
 export default header;
