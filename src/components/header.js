@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { FaGraduationCap, FaHourglassHalf, FaBell, FaUserTie, FaSearch } from "react-icons/fa";
-import { IoHourglassOutline } from "react-icons/io5";
 import { BiMessage, BiMessageError } from "react-icons/bi";
 
 function header() {
@@ -131,11 +130,15 @@ const Header = styled.nav`
     font-size: 16px;
     color: #999;
     font-size: 16px;
+    text-transform: uppercase;
   }
   .search-input:focus{
       outline: none;
       border: none;
   }
+  .search-input::placeholder { /* Recent browsers */
+    text-transform: none;
+}
 
   // end of search input box
 
