@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { BiDollarCircle } from "react-icons/bi";
 import { FiInfo } from "react-icons/fi";
 import { RiArrowUpDownFill ,RiAddCircleFill} from "react-icons/ri";
+import StockHeader from "./StockHeader";
 
 function trade() {
   return (
@@ -106,7 +107,7 @@ function trade() {
           </div>
         </div>
       </div>
-      <div className="stock-container grid-item">chart</div>
+      <div className="stock-container grid-item"><StockHeader/></div>
       <div className="portfolio-container grid-item">portfolio</div>
     </Container>
   );
