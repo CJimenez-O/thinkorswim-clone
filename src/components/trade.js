@@ -4,6 +4,7 @@ import { BiDollarCircle } from "react-icons/bi";
 import { FiInfo } from "react-icons/fi";
 import { RiArrowUpDownFill ,RiAddCircleFill} from "react-icons/ri";
 import StockHeader from "./StockHeader";
+import StockInfo from "./StockInfo";
 
 function trade() {
   return (
@@ -107,7 +108,10 @@ function trade() {
           </div>
         </div>
       </div>
-      <div className="stock-container grid-item"><StockHeader/></div>
+      <div className="stock-container grid-item">
+        <StockHeader/>
+        <StockInfo/>
+      </div>
       <div className="portfolio-container grid-item">portfolio</div>
     </Container>
   );
@@ -119,6 +123,7 @@ const Container = styled.div`
   grid-column-gap: 20px;
   background-color: #1f1f1f;
   height: 100vh;
+  overflow-y: hidden;
 
   .grid-item {
     border: 1px solid rgba(0, 0, 0, 0.8);

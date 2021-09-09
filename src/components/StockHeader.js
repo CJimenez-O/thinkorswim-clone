@@ -104,7 +104,7 @@ const Container = styled.div`
 }
 .stock-actions{
     display: flex;
-    gap: 20px;
+    gap: 10px;
     margin-top: 5px;
 }
 .sell-action{
