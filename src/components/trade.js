@@ -6,6 +6,7 @@ import { RiArrowUpDownFill, RiAddCircleFill } from "react-icons/ri";
 import StockHeader from "./StockHeader";
 import StockInfo from "./StockInfo";
 import Chart from "./Chart";
+import News from "./News";
 
 function trade() {
 	return (
@@ -73,12 +74,12 @@ function trade() {
 						</p>
 					</div>
 					<div className="sub-title">
-						<p className="position-title">All Account Positions</p>
+						<p className="position-title">Top Daily Gainers</p>
 						<div className="create-new-wl">
 							<p className="wl-sub-title">
 								<span className="wl-icon">
 									<RiAddCircleFill />
-								</span>{" "}
+								</span>
 								New Watchlist
 							</p>
 						</div>
@@ -131,8 +132,9 @@ function trade() {
 				<StockHeader />
 				<StockInfo />
 				<Chart />
+				<News />
 			</div>
-			<div className="portfolio-container grid-item">portfolio</div>
+			<div className="portfolio-container grid-item">portfolio-----section</div>
 		</Container>
 	);
 }
@@ -142,9 +144,8 @@ const Container = styled.div`
 	grid-template-columns: auto 50% auto;
 	grid-column-gap: 20px;
 	background-color: #1f1f1f;
-	height: 100vh;
+	height: 91vh;
 	overflow-y: hidden;
-
 	.grid-item {
 		border: 1px solid rgba(0, 0, 0, 0.8);
 		padding: 20px;
@@ -214,6 +215,10 @@ const Container = styled.div`
 		justify-content: space-between;
 		font-size: 18px;
 	}
+
+	.position-title {
+		padding-top: 5px;
+	}
 	.wl-icon {
 		position: relative;
 		top: 3px;
@@ -239,6 +244,10 @@ const Container = styled.div`
 
 	.gray {
 		background-color: #1f1f1f;
+	}
+
+	.stock-container {
+		overflow: auto;
 	}
 `;
 
