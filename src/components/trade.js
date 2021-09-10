@@ -7,6 +7,8 @@ import StockHeader from "./StockHeader";
 import StockInfo from "./StockInfo";
 import Chart from "./Chart";
 import News from "./News";
+import Portfolio from "./Portfolio";
+import TrendingNews from "./TrendingNews";
 
 function trade() {
 	return (
@@ -54,11 +56,9 @@ function trade() {
 					</div>
 					<div className="disclaimer">
 						<p>
-							{" "}
-							<span>
-								{" "}
-								<FiInfo />{" "}
-							</span>{" "}
+							<span className="sim-icon">
+								<FiInfo />
+							</span>
 							These are simulated values.{" "}
 						</p>
 					</div>
@@ -66,10 +66,9 @@ function trade() {
 				<div className="watchlist">
 					<div>
 						<p className="watchlist-title">
-							<span>
-								{" "}
-								<RiArrowUpDownFill />{" "}
-							</span>{" "}
+							<span className="arrow-icon">
+								<RiArrowUpDownFill />
+							</span>
 							Watchlist
 						</p>
 					</div>
@@ -134,7 +133,10 @@ function trade() {
 				<Chart />
 				<News />
 			</div>
-			<div className="portfolio-container grid-item">portfolio-----section</div>
+			<div className="portfolio-container grid-item">
+				<Portfolio />
+				<TrendingNews />
+			</div>
 		</Container>
 	);
 }
@@ -161,6 +163,8 @@ const Container = styled.div`
 	.dollar-sign {
 		font-size: 23px;
 		padding-right: 10px;
+		position: relative;
+		top: 4px;
 	}
 
 	.summary-title {
@@ -191,6 +195,12 @@ const Container = styled.div`
 		margin-top: 25px;
 	}
 
+	.sim-icon {
+		position: relative;
+		top: 2px;
+		margin-right: 5px;
+	}
+
 	.disclaimer {
 		font-size: 16px;
 		margin-top: 10px;
@@ -202,6 +212,10 @@ const Container = styled.div`
 	}
 
 	// watchlist style
+	.arrow-icon {
+		position: relative;
+		top: 4px;
+	}
 	.watchlist-title {
 		font-size: 22px;
 		margin: 10px 0;

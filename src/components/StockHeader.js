@@ -36,7 +36,7 @@ function StockHeader() {
 					<div className="sell-action">
 						<div className="bid-info">
 							<p className="bid-price">157.27</p>
-							<p className="bid-size">Bid size: 1</p>
+							<p className="bid-size">Ask size: 1</p>
 						</div>
 						<div className="action-button">
 							<button className="buy-stock-button">Buy</button>
