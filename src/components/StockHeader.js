@@ -14,13 +14,9 @@ function StockHeader() {
 				<div className="stock-symbol-subtitle">
 					<p className="stock-full-name">AAPL INC COM</p>
 					<div className="stock-actions">
-						<button className="watchlist-button">Add to Watchlist</button>
-						<div className="create-alert">
-							<p className="alert-bell">
-								<FaBell />
-							</p>
-							<button className="alert-button">Create Alert</button>
-						</div>
+						<p className="disclaimer-header">
+							Disclaimer: Partially delayed data
+						</p>
 					</div>
 				</div>
 				<div className="stock-actions">
@@ -69,6 +65,12 @@ const Container = styled.div`
 		font-size: 16px;
 		font-weight: 400;
 	}
+
+	.disclaimer-header {
+		color: gray;
+		font-size: 15px;
+	}
+
 	.watchlist-button {
 		background-color: transparent;
 		font-size: 16px;

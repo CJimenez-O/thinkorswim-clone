@@ -28,18 +28,7 @@ function trade() {
 						<p className="cash-title">Account Value</p>
 						<p>$100,000</p>
 					</div>
-					<div className="flex">
-						<p className="cash-title">Option Buying Power</p>
-						<p>$100,000</p>
-					</div>
-					<div className="flex">
-						<p className="cash-title">Stock Buying Power</p>
-						<p>$100,000</p>
-					</div>
-					<div className="flex">
-						<p className="cash-title">Forex Buying Power</p>
-						<p>$100,000</p>
-					</div>
+
 					<div className="flex daily">
 						<div className="cash">
 							<p className="cash-title">Cash</p>
@@ -69,19 +58,11 @@ function trade() {
 							<span className="arrow-icon">
 								<RiArrowUpDownFill />
 							</span>
-							Watchlist
+							Watchlists
 						</p>
 					</div>
 					<div className="sub-title">
-						<p className="position-title">Top Daily Gainers</p>
-						<div className="create-new-wl">
-							<p className="wl-sub-title">
-								<span className="wl-icon">
-									<RiAddCircleFill />
-								</span>
-								New Watchlist
-							</p>
-						</div>
+						<p className="position-title">Indices</p>
 					</div>
 					<div className="watchlist-table">
 						<div>
@@ -111,6 +92,27 @@ function trade() {
 								<li className="wl-symbol-chng">0%</li>
 								<li className="wl-symbol-vol">32,645,238</li>
 							</ul>
+						</div>
+					</div>
+					<div className="sub-title">
+						<p className="position-title">Top Gainers</p>
+					</div>
+					<div className="watchlist-table">
+						<div>
+							<ul className="wl-table-header">
+								<li className="wl-symbol-title">Symbol</li>
+								<li className="wl-symbol-info"> Mark </li>
+								<li className="wl-symbol-info"> Chng %</li>
+								<li className="wl-symbol-info"> Volume </li>
+							</ul>
+						</div>
+						<div>
+							<ul className="wl-symbol">
+								<li className="wl-symbol-title">AAPL</li>
+								<li className="wl-symbol-mark">130</li>
+								<li className="wl-symbol-chng">0%</li>
+								<li className="wl-symbol-vol">32,645,238</li>
+							</ul>
 							<ul className="wl-symbol gray">
 								<li className="wl-symbol-title">AAPL</li>
 								<li className="wl-symbol-mark">130</li>
@@ -129,8 +131,8 @@ function trade() {
 			</div>
 			<div className="stock-container grid-item">
 				<StockHeader />
-				<StockInfo />
 				<Chart />
+				<StockInfo />
 				<News />
 			</div>
 			<div className="portfolio-container grid-item">
@@ -192,7 +194,7 @@ const Container = styled.div`
 	}
 
 	.daily {
-		margin-top: 25px;
+		margin-top: 5px;
 	}
 
 	.sim-icon {
@@ -204,17 +206,18 @@ const Container = styled.div`
 	.disclaimer {
 		font-size: 16px;
 		margin-top: 10px;
-		padding: 7px 0px;
-		padding-left: 20px;
+		padding: 7px 5px;
 		background-color: #f6b333;
 		border-radius: 5px;
 		color: #000;
+		text-align: center;
 	}
 
 	// watchlist style
 	.arrow-icon {
 		position: relative;
 		top: 4px;
+		margin-right: 5px;
 	}
 	.watchlist-title {
 		font-size: 22px;
@@ -231,7 +234,7 @@ const Container = styled.div`
 	}
 
 	.position-title {
-		padding-top: 5px;
+		padding: 5px 0;
 	}
 	.wl-icon {
 		position: relative;
