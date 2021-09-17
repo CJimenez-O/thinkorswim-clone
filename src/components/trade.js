@@ -148,7 +148,7 @@ const Container = styled.div`
 	grid-template-columns: auto 50% auto;
 	grid-column-gap: 20px;
 	background-color: #1f1f1f;
-	height: 91vh;
+	height: 92vh;
 	overflow-y: hidden;
 	.grid-item {
 		border: 1px solid rgba(0, 0, 0, 0.8);
@@ -222,6 +222,7 @@ const Container = styled.div`
 	.watchlist-title {
 		font-size: 22px;
 		margin: 10px 0;
+		margin-top: 40px;
 	}
 	.create-new-wl {
 		cursor: pointer;

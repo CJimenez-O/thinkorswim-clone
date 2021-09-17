@@ -60,6 +60,17 @@ function TrendingNews() {
 						<p className="news-item-author">Yahoo</p>
 					</a>
 				</li>
+				<li className="market-news-item">
+					<a
+						href="https://finance.yahoo.com/video/why-williams-sonoma-ceo-calls-141113070.html"
+						className="news-item-wrapper"
+					>
+						<p className="news-item-title">
+							Why Williams-Sonoma CEO calls the labor...
+						</p>
+						<p className="news-item-author">Yahoo</p>
+					</a>
+				</li>
 			</ul>
 		</Container>
 	);
